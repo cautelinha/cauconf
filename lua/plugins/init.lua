@@ -40,4 +40,10 @@ return require'packer'.startup(function()
 		requires = 'kyazdani42/nvim-web-devicons',
 		config = require('plugins/configs/nvim-tree')
 	}
+
+	use {
+		'nvim-telescope/telescope.nvim',
+		requires = 'nvim-lua/plenary.nvim',
+		config = require('plugins/configs/telescope')
+	}
 end)
