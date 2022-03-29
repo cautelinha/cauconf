@@ -3,7 +3,8 @@ return require'packer'.startup(function()
 	use 'kyazdani42/nvim-web-devicons'
 	use 'https://github.com/jiangmiao/auto-pairs.git'
 	use 'https://github.com/tpope/vim-fugitive.git'
-	use 'https://github.com/tomasr/molokai.git'
+	use 'pineapplegiant/spaceduck'
+	use 'leafgarland/typescript-vim'
 
 	use {
 		'nvim-treesitter/nvim-treesitter',
@@ -41,6 +42,6 @@ return require'packer'.startup(function()
 		config = require('plugins/configs/nerdtree')
 	}
 
-	use '/home/linuxbrew/.linuxbrew/bin/fzf'
+	use 'junegunn/fzf'
 	use 'junegunn/fzf.vim'
 end)
