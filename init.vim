@@ -7,3 +7,4 @@ set softtabstop=0 noexpandtab
 set shiftwidth=2
 
 lua require('plugins')
+lua require('colors')
