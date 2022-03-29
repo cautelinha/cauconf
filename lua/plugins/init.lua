@@ -36,14 +36,11 @@ return require'packer'.startup(function()
 	]]--
 
 	use {
-		'kyazdani42/nvim-tree.lua',
-		requires = 'kyazdani42/nvim-web-devicons',
-		config = require('plugins/configs/nvim-tree')
+		'preservim/nerdtree',
+		requires = 'Xuyuanp/nerdtree-git-plugin',
+		config = require('plugins/configs/nerdtree')
 	}
 
-	use {
-		'nvim-telescope/telescope.nvim',
-		requires = 'nvim-lua/plenary.nvim',
-		config = require('plugins/configs/telescope')
-	}
+	use '/home/linuxbrew/.linuxbrew/bin/fzf'
+	use 'junegunn/fzf.vim'
 end)
