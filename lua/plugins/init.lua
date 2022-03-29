@@ -15,4 +15,10 @@ return require'packer'.startup(function()
 		requires = { 'kyazdani42/nvim-web-devicons', opt = true },
 		config = require('plugins/configs/lualine')
 	}
+
+	use {
+		'neovim/nvim-lspconfig',
+		'williamboman/nvim-lsp-installer',
+		config = require('plugins/configs/lsp')
+	}
 end)
