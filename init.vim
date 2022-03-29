@@ -5,3 +5,5 @@ set nu
 set tabstop=2
 set softtabstop=0 noexpandtab
 set shiftwidth=2
+
+lua require('plugins')
