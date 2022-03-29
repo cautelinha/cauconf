@@ -1,14 +1,12 @@
+local lsp_installer = require('nvim-lsp-installer')
 local lsp_utils = require('plugins/configs/lsp/keybinds')
 
--- map buffer local keybindings when the language server attaches
-local servers = { 'angularls', 'tsserver' }
-for _, lsp in pairs(servers) do
-  require('lspconfig')[lsp].setup {
+lsp_installer.on_server_ready(function(server)
+  server:setup({
     on_attach = lsp_utils.on_attach,
 		capabilities = lsp_utils.capabilities,
     flags = {
-      -- This will be the default in neovim 0.7+
       debounce_text_changes = 150,
     }
-  }
-end
+  })
+end)
