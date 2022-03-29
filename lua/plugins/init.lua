@@ -1,33 +1,45 @@
 return require'packer'.startup(function()
 	use 'wbthomason/packer.nvim'
+
 	use 'kyazdani42/nvim-web-devicons'
 	use 'https://github.com/jiangmiao/auto-pairs.git'
 	use 'https://github.com/tpope/vim-fugitive.git'
-	use 'pineapplegiant/spaceduck'
-	use 'leafgarland/typescript-vim'
+	use 'junegunn/fzf'
+	use 'junegunn/fzf.vim'
 
 	use {
-		'nvim-treesitter/nvim-treesitter',
-		run = ':TSUpdate'
-	}
-
-	use {
-		'nvim-lualine/lualine.nvim',
-		requires = { 'kyazdani42/nvim-web-devicons', opt = true },
-		config = require('plugins/configs/lualine')
+		'lunarvim/darkplus.nvim'
 	}
 
 	use {
 		'neovim/nvim-lspconfig',
-		'williamboman/nvim-lsp-installer',
-		config = require('plugins/configs/lsp')
+		'williamboman/nvim-lsp-installer'
+	}
+	use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
+  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
+
+	use {
+		'preservim/nerdtree',
+		requires = 'Xuyuanp/nerdtree-git-plugin',
+		config = function() require('plugins/configs/nerdtree') end
 	}
 
 	use {
+		'nvim-treesitter/nvim-treesitter',
+		run = ':TSUpdate',
+		config = function() require('plugins/configs/tree-sitter') end
+	}
+
+	require('plugins/configs/lsp')
+	require('plugins/configs/darkplus')
+	
+	--[[
+	use {
 		'akinsho/bufferline.nvim',
 		requires = 'kyazdani42/nvim-web-devicons',
-		config = require('plugins/configs/bufferline')
+		config = function() require('plugins/configs/bufferline') end
 	}
+	]]--
 
 	--[[
 	use {
@@ -35,13 +47,4 @@ return require'packer'.startup(function()
 		--config = require('plugins/configs/gitsigns')
 	}
 	]]--
-
-	use {
-		'preservim/nerdtree',
-		requires = 'Xuyuanp/nerdtree-git-plugin',
-		config = require('plugins/configs/nerdtree')
-	}
-
-	use 'junegunn/fzf'
-	use 'junegunn/fzf.vim'
 end)
