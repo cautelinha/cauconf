@@ -28,8 +28,16 @@ return require'packer'.startup(function()
 		config = require('plugins/configs/bufferline')
 	}
 
+	--[[
 	use {
-		'lewis6991/gitsigns.nvim',
-		config = require('plugins/configs/gitsigns')
+		'lewis6991/gitsigns.nvim'
+		--config = require('plugins/configs/gitsigns')
+	}
+	]]--
+
+	use {
+		'kyazdani42/nvim-tree.lua',
+		requires = 'kyazdani42/nvim-web-devicons',
+		config = require('plugins/configs/nvim-tree')
 	}
 end)
