@@ -21,4 +21,15 @@ return require'packer'.startup(function()
 		'williamboman/nvim-lsp-installer',
 		config = require('plugins/configs/lsp')
 	}
+
+	use {
+		'akinsho/bufferline.nvim',
+		requires = 'kyazdani42/nvim-web-devicons',
+		config = require('plugins/configs/bufferline')
+	}
+
+	use {
+		'lewis6991/gitsigns.nvim',
+		config = require('plugins/configs/gitsigns')
+	}
 end)
