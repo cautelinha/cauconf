@@ -6,10 +6,7 @@ return require'packer'.startup(function()
 	use 'https://github.com/tpope/vim-fugitive.git'
 	use 'junegunn/fzf'
 	use 'junegunn/fzf.vim'
-
-	use {
-		'lunarvim/darkplus.nvim'
-	}
+	use 'https://github.com/sickill/vim-monokai.git'
 
 	use {
 		'neovim/nvim-lspconfig',
@@ -29,22 +26,10 @@ return require'packer'.startup(function()
 		run = ':TSUpdate',
 		config = function() require('plugins/configs/tree-sitter') end
 	}
-
-	require('plugins/configs/lsp')
-	require('plugins/configs/darkplus')
 	
-	--[[
 	use {
 		'akinsho/bufferline.nvim',
 		requires = 'kyazdani42/nvim-web-devicons',
 		config = function() require('plugins/configs/bufferline') end
 	}
-	]]--
-
-	--[[
-	use {
-		'lewis6991/gitsigns.nvim'
-		--config = require('plugins/configs/gitsigns')
-	}
-	]]--
 end)
