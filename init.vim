@@ -10,7 +10,10 @@ set ignorecase
 set smartindent
 set updatetime=300
 set scrolloff=10
+set hidden
 
+lua require('keymaps')
 lua require('plugins')
 lua require('plugins/configs/colorscheme')
 lua require('plugins/configs/lsp')
+lua require('plugins/configs/cmp')
