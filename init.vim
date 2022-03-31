@@ -4,7 +4,7 @@ set nobackup
 set nowritebackup
 set nu
 set tabstop=2
-set softtabstop=0 noexpandtab
+set softtabstop=2 expandtab
 set shiftwidth=2
 set cmdheight=2
 set clipboard="unnamedplus"

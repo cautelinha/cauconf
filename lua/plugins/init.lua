@@ -10,6 +10,7 @@ return require'packer'.startup(function()
 	use 'https://github.com/tpope/vim-vividchalk.git'
 	use 'itchyny/lightline.vim'
 	use 'lukas-reineke/indent-blankline.nvim'
+	use 'https://github.com/tomasr/molokai.git'
 
 	use {
 		'junegunn/fzf',
