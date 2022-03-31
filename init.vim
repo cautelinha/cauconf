@@ -27,3 +27,5 @@ lua require('plugins')
 lua require('plugins/configs/colorscheme')
 
 runtime ./coc-keybinds.vim
+
+let $FZF_DEFAULT_COMMAND="rg --files"

@@ -9,6 +9,7 @@ return require'packer'.startup(function()
 	use 'https://github.com/sickill/vim-monokai.git'
 	use 'https://github.com/morhetz/gruvbox.git'
 	use 'https://github.com/pineapplegiant/spaceduck.git'
+	use 'https://github.com/tpope/vim-vividchalk.git'
 	use 'itchyny/lightline.vim'
 	use 'lukas-reineke/indent-blankline.nvim'
 
