@@ -1,4 +1,7 @@
 set encoding=utf-8
+set hidden
+set nobackup
+set nowritebackup
 set nu
 set tabstop=2
 set softtabstop=0 noexpandtab
@@ -10,10 +13,17 @@ set ignorecase
 set smartindent
 set updatetime=300
 set scrolloff=10
-set hidden
+set shortmess+=c
+set signcolumn=number
+
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
 
 lua require('keymaps')
 lua require('plugins')
 lua require('plugins/configs/colorscheme')
-lua require('plugins/configs/lsp')
-lua require('plugins/configs/cmp')
+
+source coc-keybinds.vim
