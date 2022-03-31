@@ -4,14 +4,17 @@ return require'packer'.startup(function()
 	use 'kyazdani42/nvim-web-devicons'
 	use 'https://github.com/jiangmiao/auto-pairs.git'
 	use 'https://github.com/tpope/vim-fugitive.git'
-	use 'junegunn/fzf'
-	use 'junegunn/fzf.vim'
 	use 'https://github.com/sickill/vim-monokai.git'
 	use 'https://github.com/morhetz/gruvbox.git'
 	use 'https://github.com/pineapplegiant/spaceduck.git'
 	use 'https://github.com/tpope/vim-vividchalk.git'
 	use 'itchyny/lightline.vim'
 	use 'lukas-reineke/indent-blankline.nvim'
+
+	use {
+		'junegunn/fzf',
+		'junegunn/fzf.vim'
+	}
 
 	use {
 		'neoclide/coc.nvim',

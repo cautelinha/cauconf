@@ -25,6 +25,7 @@ endif
 lua require('keymaps')
 lua require('plugins')
 lua require('plugins/configs/colorscheme')
+lua require('plugins/configs/fzf')
 
 runtime ./coc-keybinds.vim
 
