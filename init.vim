@@ -26,4 +26,4 @@ lua require('keymaps')
 lua require('plugins')
 lua require('plugins/configs/colorscheme')
 
-source coc-keybinds.vim
+runtime ./coc-keybinds.vim
