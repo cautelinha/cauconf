@@ -1,7 +1,6 @@
 return require'packer'.startup(function()
 	use 'wbthomason/packer.nvim'
 
-	use 'kyazdani42/nvim-web-devicons'
 	use 'https://github.com/jiangmiao/auto-pairs.git'
 	use 'https://github.com/tpope/vim-fugitive.git'
 	use 'https://github.com/sickill/vim-monokai.git'
@@ -11,6 +10,7 @@ return require'packer'.startup(function()
 	use 'itchyny/lightline.vim'
 	use 'lukas-reineke/indent-blankline.nvim'
 	use 'https://github.com/tomasr/molokai.git'
+  use 'https://github.com/airblade/vim-gitgutter.git'
 
 	use {
 		'junegunn/fzf',
@@ -39,4 +39,10 @@ return require'packer'.startup(function()
 		requires = 'kyazdani42/nvim-web-devicons',
 		config = function() require('plugins/configs/bufferline') end
 	}
+
+  use {
+    'sindrets/diffview.nvim',
+    requires = 'nvim-lua/plenary.nvim',
+		config = function() require('plugins/configs/diffview') end
+  }
 end)
