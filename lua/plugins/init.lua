@@ -39,10 +39,4 @@ return require'packer'.startup(function()
 		requires = 'kyazdani42/nvim-web-devicons',
 		config = function() require('plugins/configs/bufferline') end
 	}
-
-  use {
-    'sindrets/diffview.nvim',
-    requires = 'nvim-lua/plenary.nvim',
-		config = function() require('plugins/configs/diffview') end
-  }
 end)
