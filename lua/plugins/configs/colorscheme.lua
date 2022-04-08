@@ -1,5 +1,5 @@
 vim.cmd [[
-	colorscheme molokai
+	colorscheme gruvbox
 	let g:lightline = {
 		\ 'colorscheme': 'wombat',
 		\ 'active': {

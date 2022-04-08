@@ -22,6 +22,8 @@ if exists('+termguicolors')
   set termguicolors
 endif
 
+let NERDTreeShowLineNumbers=1
+
 lua require('keymaps')
 lua require('plugins')
 lua require('plugins/configs/colorscheme')
