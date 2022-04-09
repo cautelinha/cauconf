@@ -20,9 +20,8 @@ keymap('v', '<', '<gv', opts)
 keymap('v', '>', '>gv', opts)
 
 -- Open tree
-keymap('n', '<F2>', ':NvimTreeToggle<CR>', opts)
-keymap('n', '<leader>r', ':NvimTreeRefresh<CR>', opts)
-keymap('n', '<leader>o', ':NvimTreeFindFile<CR>', opts)
+keymap('n', '<F2>', ':NERDTreeToggle<CR>', opts)
+keymap('n', '<leader>o', ':NERDTreeFind<CR>', opts)
 
 -- FZF
 keymap('n', '<C-p>', '<cmd>Files<CR>', opts)
