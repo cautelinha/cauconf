@@ -1,2 +1,4 @@
-require('keymaps')
-require('plugins')
+require'plugins'
+require'colorscheme'
+require'settings'
+require'keymap-settings'
