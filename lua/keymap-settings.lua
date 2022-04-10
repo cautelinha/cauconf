@@ -24,4 +24,7 @@ keymap('n', '<F2>', ':NERDTreeToggle<CR>', opts)
 keymap('n', '<leader>o', ':NERDTreeFind<CR>', opts)
 
 -- FZF
-keymap('n', '<C-p>', '<cmd>Files<CR>', opts)
+keymap('n', '<C-p>', ':Files<CR>', opts)
+
+-- Git
+keymap('n', '<F3>', ':Gvdiff :0<CR>', opts)
