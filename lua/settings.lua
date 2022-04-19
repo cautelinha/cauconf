@@ -10,6 +10,8 @@ vim.o.smartcase = true
 vim.o.smartindent = true
 vim.o.updatetime = 300
 vim.o.scrolloff = 8
+vim.o.hidden = true
+vim.o.relativenumber = true
 
 vim.cmd [[
 	hi Normal guibg=NONE ctermbg=NONE
