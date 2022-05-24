@@ -22,7 +22,7 @@ vim.cmd [[
 	endfunction
 
 	function! GitBranch()
-		let branch=fugitive#head()
+    let branch=FugitiveStatusline()
 		if branch != ''
 			return ' ' . branch . ' '
 		else
